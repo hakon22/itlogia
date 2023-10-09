@@ -1,0 +1,41 @@
+{
+  "name": "itlogia",
+  "version": "1.0.0",
+  "description": "This project has been created using **webpack-cli**, you can now run",
+  "private": true,
+  "proxy": "http://0.0.0.0:3001",
+  "main": "./src/index.js",
+  "scripts": {
+    "build": "npx webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "axios": "^1.4.0",
+    "html-webpack-plugin": "^5.5.3",
+    "imask": "^7.1.0-alpha.0",
+    "lodash": "^4.17.21",
+    "node-polyfill-webpack-plugin": "^2.0.1",
+    "style-loader": "^3.3.3",
+    "yup": "^1.2.0"
+  },
+  "devDependencies": {
+    "@webpack-cli/generators": "^3.0.7",
+    "css-loader": "^6.8.1",
+    "html-loader": "^4.2.0",
+    "htmlhint": "^1.1.4",
+    "postcss-loader": "^7.3.3",
+    "sass": "^1.63.6",
+    "sass-loader": "^13.3.2",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-standard-scss": "^11.0.0",
+    "stylelint-scss": "^5.2.1",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}

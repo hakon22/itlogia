@@ -1,0 +1,13 @@
+@mixin font ($size: 0.875em, $weight: 400, $lineH: 1.285) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lineH;
+}
+
+@mixin p($side, $value) { // внутренний отступ, например: @include p(top, 20px) выведет в стилях 'padding-top: 20px';
+    padding-#{$side}: #{$value};
+}
+
+@mixin m($side, $value) {
+    margin-#{$side}: #{$value};
+}
