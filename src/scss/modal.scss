@@ -1,0 +1,68 @@
+.modalBackground {
+    display: none;
+
+    &::before {
+        content: '';
+        background: $modalFont;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+        z-index: 2;
+    }
+
+    /* позиционирование самого модального окна */
+    .modalActive {
+        position: fixed;
+        display: block;
+        width: 81.25%;
+        max-height: 90vh;
+        overflow: auto;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        border-radius: 20px;
+        background-color: $modalBgWindow;
+        padding: 40px 20px;
+        z-index: 3;
+        animation: 0.4s show ease;
+        -webkit-animation: 0.4s show ease;
+        -o-animation: 0.4s show ease;
+
+        /* кнопочка закрытия модального окна */
+        .modalClose {
+            position: absolute;
+            background-image: url('../images/close.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            right: 17px;
+            top: 17px;
+            width: 17px;
+            height: 17px;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        .modalWindow {
+            position: relative;
+            @include p(top, 0);
+
+            img {
+                vertical-align: middle;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

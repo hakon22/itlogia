@@ -7,7 +7,13 @@
     <meta name="description" content="Самая вкусная пицца в мире только в Pizza Cheff">
     <title>Pizza Cheff</title>
 </head>
-<body>
+<body class="preload">
+    <div class="modalBackground">
+        <div class="modalActive">
+          <div class="modalClose"></div>
+          <div class="modalWindow"></div>
+        </div>
+    </div>
     <header class="header">
         <div class="container">
             <div class="header__logo">
@@ -32,11 +38,16 @@
                         </li>
                     </ul>
                 </nav>
+                <div class="menu-btn">
+		            <span></span>
+		            <span></span>
+		            <span></span>
+	            </div>
             </div>
         </div>
     </header>
     <main class="container">
-        <section class="description">
+        <section class="description wow slideInLeft">
             <div class="description__title">
                 <div class="description__title--text">
                     <h1>Самая вкусная пицца в мире</h1>
@@ -100,12 +111,12 @@
             </div>
             <div class="description__image"></div>
         </section>
-        <section class="product">
+        <section class="product wow slideInRight">
             <h2 class="product-title">Выберите свою любимую пиццу</h2>
             <div class="product__cards">
                 <div class="product__cards-card">
                     <div class="card-image">
-                        <img src="./images/Layer 2.png" alt="Мясная Делюкс">
+                        <img src="./images/Layer 2.png" alt="Мясная Делюкс" data-modal>
                     </div>
                     <div class="card-title">Мясная Делюкс</div>
                     <div class="card-description">Пепперони, лук, бекон, томатная паста, колбаски, перец, грибы, соус чили, ананасы</div>
@@ -113,7 +124,7 @@
                 </div>
                 <div class="product__cards-card">
                     <div class="card-image">
-                        <img src="./images/Layer 3.png" alt="Морская Премиум">
+                        <img src="./images/Layer 3.png" alt="Морская Премиум" data-modal>
                     </div>
                     <div class="card-title">Морская Премиум</div>
                     <div class="card-description">Перец, сыр, креветки, кальмары, мидии, лосось</div>
@@ -121,7 +132,7 @@
                 </div>
                 <div class="product__cards-card">
                     <div class="card-image">
-                        <img src="./images/Layer 4.png" alt="Бекон и Сосиски">
+                        <img src="./images/Layer 4.png" alt="Бекон и Сосиски" data-modal>
                     </div>
                     <div class="card-title">Бекон и Сосиски</div>
                     <div class="card-description">Бекон, сыр, сосиски, ананас, томатная паста</div>
@@ -129,7 +140,7 @@
                 </div>
                 <div class="product__cards-card">
                     <div class="card-image">
-                        <img src="./images/Layer 5.png" alt="Куриная Делюкс">
+                        <img src="./images/Layer 5.png" alt="Куриная Делюкс" data-modal>
                     </div>
                     <div class="card-title">Куриная Делюкс</div>
                     <div class="card-description">Курица, ананас, сыр Пепперони, соус для пиццы, томатная паста</div>
@@ -137,7 +148,7 @@
                 </div>
                 <div class="product__cards-card">
                     <div class="card-image">
-                        <img src="./images/Layer 6.png" alt="Барбекю Премиум">
+                        <img src="./images/Layer 6.png" alt="Барбекю Премиум" data-modal>
                     </div>
                     <div class="card-title">Барбекю Премиум</div>
                     <div class="card-description">Свинина BBQ, соус Барбкею, сыр, курица, соус для пиццы, соус чили</div>
@@ -145,7 +156,7 @@
                 </div>
                 <div class="product__cards-card">
                     <div class="card-image">
-                        <img src="./images/Layer 7.png" alt="Пепперони Дабл">
+                        <img src="./images/Layer 7.png" alt="Пепперони Дабл" data-modal>
                     </div>
                     <div class="card-title">Пепперони Дабл</div>
                     <div class="card-description">Пепперони, сыр, колбаса 2 видов: обжаренная и вареная</div>
@@ -153,7 +164,7 @@
                 </div>
                 <div class="product__cards-card">
                     <div class="card-image">
-                        <img src="./images/Layer 8.png" alt="Куриное трио">
+                        <img src="./images/Layer 8.png" alt="Куриное трио" data-modal>
                     </div>
                     <div class="card-title">Куриное трио</div>
                     <div class="card-description">Жареная курица, Тушеная курица, Куриные наггетсы, перец, сыр, грибы, соус для пиццы</div>
@@ -161,13 +172,46 @@
                 </div>
                 <div class="product__cards-card">
                     <div class="card-image">
-                        <img src="./images/Layer 9.png" alt="Сырная">
+                        <img src="./images/Layer 9.png" alt="Сырная" data-modal>
                     </div>
                     <div class="card-title">Сырная</div>
                     <div class="card-description">Сыр Джюгас, Сыр с плесенью, Сыр Моцарелла, Сыр секретный</div>
                     <button class="btn" type="button">В корзину</button>
                 </div>
             </div>
+        </section>
+        <section class="feedback wow wow bounceInDown">
+            <div class="feedback__text">
+                <span class="feedback__text-title">Хватит думать!</span>
+                <span class="feedback__text-description">Доставим заказ за 30 минут!</span>
+                <p>
+                    Мы гарантированно доставим вашу пиццу за 30 минут с момента оформления заказа.
+                    Если мы опоздаем даже на 1 минуту - вы получаете весь заказ бесплатно и ваучер на
+                    скидку на следующий заказ. Мы гордимся нашим сервисом и сделаем всё, чтобы наш клиент
+                    был доволен и не остался голодный!
+                </p>
+            </div>
+            <div class="feedback__form">
+                <form id="submit">
+                    <div class="position-relative">
+                        <label for="name" class="visually-hidden">Ваше имя</label>
+                        <input id="name" type="text" placeholder="Ваше имя" class="form-control">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="position-relative">
+                        <label for="adress" class="visually-hidden">Ваш адрес</label>
+                        <input id="adress" type="text" placeholder="Адрес доставки" class="form-control">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="position-relative">
+                        <label for="phone" class="visually-hidden">Ваш телефон</label>
+                        <input id="phone" type="tel" placeholder="Телефон" class="form-control">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <button class="btn" type="submit">Оформить заказ</button>
+                </form>
+            </div>
+            <div class="feedback__image"></div>
         </section>
     </main>
 </body>

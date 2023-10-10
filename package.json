@@ -20,7 +20,7 @@
     "lodash": "^4.17.21",
     "node-polyfill-webpack-plugin": "^2.0.1",
     "style-loader": "^3.3.3",
-    "yup": "^1.2.0"
+    "wow.js": "^1.2.2"
   },
   "devDependencies": {
     "@webpack-cli/generators": "^3.0.7",

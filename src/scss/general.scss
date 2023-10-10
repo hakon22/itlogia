@@ -42,6 +42,10 @@ body {
   background-color: $main;
 }
 
+.preload * {
+  transition: none !important;
+}
+
 .container {
   width: 71%; // дабы не указывать отступы, указываем сразу размер контейнера относительно ширины body и отцентровываем его по центру
   margin: 0 auto;
