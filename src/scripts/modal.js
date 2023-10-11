@@ -5,7 +5,7 @@ const modalClose = document.querySelector('.modalClose');
 
 const scrollBar = window.innerWidth - document.body.clientWidth;
 
-const isMobile = window.screen.width < 768;
+export const isMobile = window.screen.width < 768;
 
 export const successSubmitForm = (text) => {
   modalBackground.style.display = 'block';

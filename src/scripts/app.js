@@ -3,7 +3,7 @@ import IMask from 'imask';
 import WOW from 'wow.js';
 import * as yup from 'yup';
 import './modal.js';
-import { successSubmitForm } from './modal.js';
+import { successSubmitForm, isMobile } from './modal.js';
 import routes from './routes.js';
 
 const validation = yup.object().shape({
@@ -45,8 +45,9 @@ const app = () => {
     }
   };
 
-  [menuButton, ...navLinks].forEach((el) => el.addEventListener('click', navHandler));
-
+  if (isMobile) {
+    [menuButton, ...navLinks].forEach((el) => el.addEventListener('click', navHandler));
+  }
 
   const form = document.getElementById('submit');
   const phoneInput = form.querySelector('input[type=tel]');
