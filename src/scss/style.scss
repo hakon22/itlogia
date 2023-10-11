@@ -174,6 +174,10 @@
       -moz-box-shadow: 0px 3px 10px 5px rgba(170, 183, 193, 0.2);
       box-shadow: 0px 3px 10px 5px rgba(170, 183, 193, 0.2);
 
+      &:hover {
+        background-color: $card-hover;
+      }
+
       .card-title {
         color: $dark;
 
@@ -222,7 +226,7 @@
 
     p {
       @include font(1rem, 400, 1.5);
-      @include m(top, 4em);
+      @include m(top, 3.33vw);
     }
   }
 
@@ -251,6 +255,14 @@
         font-size: 1.125rem;
         padding: 1.375rem;
         border: 1px solid $basic;
+
+        &.invalid {
+          border: 1px solid red;
+        }
+
+        &.valid {
+          border: 1px solid green;
+        }
       }
 
       .invalid-feedback {
@@ -315,6 +327,17 @@
   .product {  
     &__cards {
       grid-template-columns: repeat(3, max-content);
+    }
+  }
+
+  .feedback {
+    &__text {
+      flex-basis: 30%;
+    }
+
+    &__form {
+      @include m(left, 7vw);
+      @include m(right, 4vw);
     }
   }
 }

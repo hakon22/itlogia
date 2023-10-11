@@ -1,15 +1,3 @@
-# 🚀 Welcome to your new awesome project!
+# Fully adapted site design with JS, Webpack, SASS, Wow.js, Yup
 
-This project has been created using **webpack-cli**, you can now run
-
-```
-npm run build
-```
-
-or
-
-```
-yarn build
-```
-
-to bundle your application
+[![Project screan](https://i.ibb.co/tC8Dx77/pizza.png)](https://portfolio.am-projects.ru/pizza-cheff/)
